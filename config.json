@@ -1,0 +1,18 @@
+{
+  "smtp_settings": {
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 465,
+    "use_ssl": true,
+    "sender_email": "your_email@gmail.com",
+    "sender_password": "your_app_password_here"
+  },
+  "target_leads": [
+    "client1_prospect@example.com",
+    "client2_prospect@example.com"
+  ],
+  "dry_run": true,
+  "notes": {
+    "dry_run_explanation": "When dry_run is true, the script will simulate the connection and print the emails to terminal logs instead of sending them. Set to false to send real emails.",
+    "gmail_app_password_guide": "For Gmail, you must enable 2-Step Verification and generate a 16-character App Password via Google Account Security page. Do not use your regular account password."
+  }
+}

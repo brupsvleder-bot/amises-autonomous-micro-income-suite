@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMISES | Autonomous Micro-Income Agent Dashboard</title>
+  <!-- SEO Tags -->
+  <meta name="description" content="Autonomous Micro-Income Agent Simulation and Execution Suite (AMISES). A premium language model command center designed to generate micro-income streams.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="glow-orb glow-purple" id="orb-1"></div>
+  <div class="glow-orb glow-cyan" id="orb-2"></div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header glass-panel">
+      <div class="header-logo">
+        <span class="logo-icon">⚡</span>
+        <div class="logo-text">
+          <h1>AMISES</h1>
+          <span class="subtitle">Autonomous Micro-Income Agent Suite</span>
+        </div>
+      </div>
+      <div class="agent-badge">
+        <span class="status-dot pulsing"></span>
+        <span class="badge-text">Agent Mode: ACTIVE</span>
+      </div>
+    </header>
+
+    <!-- Core Metrics Overview -->
+    <section class="metrics-grid">
+      <div class="metric-card glass-panel card-glow-purple" id="metric-income">
+        <div class="metric-info">
+          <span class="metric-label">Simulated Income Goal</span>
+          <h3 class="metric-value">$5.00 <span class="goal-target">/ $5.00</span></h3>
+          <p class="metric-desc">Goal target reached in simulation models.</p>
+        </div>
+        <div class="metric-icon">💰</div>
+      </div>
+
+      <div class="metric-card glass-panel card-glow-cyan" id="metric-assets">
+        <div class="metric-info">
+          <span class="metric-label">Digital Assets Generated</span>
+          <h3 class="metric-value" id="count-assets">3 Files</h3>
+          <p class="metric-desc">Formated in markdown, ZIP, and text.</p>
+        </div>
+        <div class="metric-icon">📦</div>
+      </div>
+
+      <div class="metric-card glass-panel card-glow-emerald" id="metric-gigs">
+        <div class="metric-info">
+          <span class="metric-label">Active Solved Gigs</span>
+          <h3 class="metric-value" id="count-gigs">3 Leads</h3>
+          <p class="metric-desc">Completed code & proposal letters.</p>
+        </div>
+        <div class="metric-icon">🎯</div>
+      </div>
+
+      <div class="metric-card glass-panel card-glow-amber" id="metric-efficiency">
+        <div class="metric-info">
+          <span class="metric-label">Agent Efficiency</span>
+          <h3 class="metric-value">98.4%</h3>
+          <p class="metric-desc">Tokens/sec, response time optimized.</p>
+        </div>
+        <div class="metric-icon">⚡</div>
+      </div>
+    </section>
+
+    <!-- Main Workspace Split -->
+    <main class="main-content">
+      <!-- Navigation Tabs Side -->
+      <aside class="sidebar glass-panel">
+        <h2 class="sidebar-title">Command Center</h2>
+        <nav class="nav-tabs">
+          <button class="tab-btn active" data-tab="tab-control" id="btn-control">
+            <span class="tab-icon">🖥️</span>
+            Control Terminal
+          </button>
+          <button class="tab-btn" data-tab="tab-factory" id="btn-factory">
+            <span class="tab-icon">📦</span>
+            Digital Asset Factory
+          </button>
+          <button class="tab-btn" data-tab="tab-hunter" id="btn-hunter">
+            <span class="tab-icon">🎯</span>
+            Micro-Gig Hunter
+          </button>
+          <button class="tab-btn" data-tab="tab-launcher" id="btn-launcher">
+            <span class="tab-icon">🚀</span>
+            System Launch Pad
+          </button>
+        </nav>
+        <div class="system-stats">
+          <h3>Local Environment</h3>
+          <div class="stat-line">
+            <span>OS:</span>
+            <strong>Windows 11</strong>
+          </div>
+          <div class="stat-line">
+            <span>Script Runner:</span>
+            <strong>Python 3.x</strong>
+          </div>
+          <div class="stat-line">
+            <span>Asset Status:</span>
+            <span class="status-tag success">COMPLED</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Central Viewport -->
+      <section class="viewport glass-panel">
+        
+        <!-- View 1: Control Terminal -->
+        <div class="tab-content active" id="tab-control">
+          <div class="content-header">
+            <h2>🖥️ Agent Control Terminal</h2>
+            <p>Live logging feed showing the autonomous reasoning steps, target evaluations, and processing parameters.</p>
+          </div>
+          
+          <div class="terminal-container">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">amises-agent-kernel.log</span>
+              <button class="terminal-btn-clear" id="clear-terminal">Clear</button>
+            </div>
+            <div class="terminal-body" id="terminal-log">
+              <!-- Logs will be appended here dynamically by JS -->
+            </div>
+          </div>
+          <div class="control-actions">
+            <button class="btn btn-primary" id="btn-trigger-simulation">Run Complete AI Simulation</button>
+            <button class="btn btn-secondary" id="btn-sys-diagnostic">System Diagnostic Check</button>
+          </div>
+        </div>
+
+        <!-- View 2: Digital Asset Factory -->
+        <div class="tab-content" id="tab-factory">
+          <div class="content-header">
+            <h2>📦 The Digital Asset Factory</h2>
+            <p>High-value files written autonomously by the language model. These are saved in your workspace outputs folder and are fully ready to package and resell.</p>
+          </div>
+
+          <div class="assets-grid">
+            <div class="asset-item-card glass-panel">
+              <div class="asset-badge-type">MARKDOWN E-BOOK</div>
+              <h3>Prompt Engineering Playbook</h3>
+              <p>An expert-level guide containing advanced identity formatting, few-shot schemas, and XML separation tags. Rebrand and sell on Gumroad.</p>
+              <div class="asset-meta">
+                <span>Format: <strong>.md</strong></span>
+                <span>Size: <strong>~9 KB</strong></span>
+              </div>
+              <div class="asset-card-actions">
+                <a href="outputs/Prompt_Engineering_Playbook.md" class="btn btn-secondary" target="_blank" download>Open Raw File</a>
+                <button class="btn btn-primary btn-rebrand" data-asset="prompt">Preview Content</button>
+              </div>
+            </div>
+
+            <div class="asset-item-card glass-panel">
+              <div class="asset-badge-type">CSS UI COMPONENT KIT</div>
+              <h3>Glassmorphic UI Boilerplate</h3>
+              <p>A package containing high-fidelity modern CSS tokens, interactive buttons, glass cards, and pulsing glows, including a demo HTML presentation page.</p>
+              <div class="asset-meta">
+                <span>Format: <strong>.zip</strong></span>
+                <span>Size: <strong>~5 KB</strong></span>
+              </div>
+              <div class="asset-card-actions">
+                <a href="outputs/Glassmorphism_UI_Boilerplate.zip" class="btn btn-secondary" download>Download ZIP</a>
+                <button class="btn btn-primary btn-rebrand" data-asset="css">Preview UI Code</button>
+              </div>
+            </div>
+
+            <div class="asset-item-card glass-panel">
+              <div class="asset-badge-type">COPYWRITING KIT</div>
+              <h3>High-Conversion Outreach Suite</h3>
+              <p>A collection of landing page copywriting, cold freelance pitches, and viral educational threads designed to build traffic funnels.</p>
+              <div class="asset-meta">
+                <span>Format: <strong>.txt</strong></span>
+                <span>Size: <strong>~6 KB</strong></span>
+              </div>
+              <div class="asset-card-actions">
+                <a href="outputs/High_Conversion_Copywriting_Kit.txt" class="btn btn-secondary" target="_blank" download>Open Raw File</a>
+                <button class="btn btn-primary btn-rebrand" data-asset="copy">Preview Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Preview Area -->
+          <div class="preview-container glass-panel hidden" id="asset-preview-box">
+            <div class="preview-header">
+              <h3 id="preview-title">Asset Preview</h3>
+              <button class="btn-close-preview" id="close-preview">×</button>
+            </div>
+            <pre class="preview-body" id="preview-content">
+              <!-- Content loaded via JS -->
+            </pre>
+          </div>
+        </div>
+
+        <!-- View 3: Micro-Gig Hunter -->
+        <div class="tab-content" id="tab-hunter">
+          <div class="content-header">
+            <h2>🎯 The Micro-Gig Hunter</h2>
+            <p>Scanning online freelance boards for micro-tasks. The agent evaluates listings, generates the exact completed code/solution, and writes the high-conversion pitch.</p>
+          </div>
+
+          <div class="hunter-layout">
+            <!-- Job List Panel -->
+            <div class="job-list-panel glass-panel" id="job-list">
+              <!-- Dynamically populated -->
+            </div>
+
+            <!-- Job Solution Panel -->
+            <div class="job-solution-panel glass-panel" id="job-detail-panel">
+              <div class="empty-state">
+                <span>🎯</span>
+                <p>Select a job listing on the left to review the completed solution and personalized sales proposal pitch.</p>
+              </div>
+              <!-- Loaded dynamically via JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- View 4: System Launch Pad -->
+        <div class="tab-content" id="tab-launcher">
+          <div class="content-header">
+            <h2>🚀 System Launch Pad</h2>
+            <p>How to activate these simulation models in the real world to establish a permanent $5-$50 micro-income stream using your local setup.</p>
+          </div>
+
+          <div class="launcher-steps">
+            <div class="launcher-step glass-panel">
+              <div class="step-num">1</div>
+              <div class="step-info">
+                <h3>Launch Phase 1: Establish Your Identity Assets</h3>
+                <p>Create free merchant accounts on <a href="https://gumroad.com" target="_blank">Gumroad</a> or <a href="https://payhip.com" target="_blank">Payhip</a>. These platforms support instant global digital downloads without hosting costs.</p>
+                <ul class="step-checklist">
+                  <li><input type="checkbox" checked disabled> Create raw digital assets (Generated autonomously in `outputs/` folder)</li>
+                  <li><input type="checkbox"> Upload `Glassmorphism_UI_Boilerplate.zip` and set price to **$5.00**</li>
+                  <li><input type="checkbox"> Upload `Prompt_Engineering_Playbook.md` (or convert to PDF) and set price to **$5.00**</li>
+                  <li><input type="checkbox"> Copy-paste the generated Gumroad landing page copy from the Copywriting Kit</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="launcher-step glass-panel">
+              <div class="step-num">2</div>
+              <div class="step-info">
+                <h3>Launch Phase 2: Deploy Active Gig Outreach</h3>
+                <p>Create profiles on Upwork, Freelancer, or Fiverr. Search for micro-gigs daily and pitch them directly using our "Value First" completed solutions approach.</p>
+                <ul class="step-checklist">
+                  <li><input type="checkbox" checked disabled> Build local solutions database (Done via `gig_hunter.py`)</li>
+                  <li><input type="checkbox"> Set up profile headers using professional branding generated in Copywriting templates</li>
+                  <li><input type="checkbox"> Scan RSS feeds daily using `scripts/gig_hunter.py`</li>
+                  <li><input type="checkbox"> Copy the pre-generated code and customized pitch to send straight to the client</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="launcher-step glass-panel">
+              <div class="step-num">3</div>
+              <div class="step-info">
+                <h3>Launch Phase 3: Setup Automated Promotion</h3>
+                <p>Use platforms like Twitter/X, Dev.to, or Medium to share parts of your guide, directing traffic back to your Gumroad store.</p>
+                <ul class="step-checklist">
+                  <li><input type="checkbox"> Post the viral 5-part Twitter/X educational thread from the Copywriting Kit</li>
+                  <li><input type="checkbox"> Publish a developer blog post on Dev.to showcasing the glassmorphism CSS boilerplate</li>
+                  <li><input type="checkbox"> Link your portfolio or Gumroad store in your social bio</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer glass-panel">
+      <p>© 2026 AMISES | Designed and Powered by Antigravity Agent Model (Google DeepMind)</p>
+      <p>Secure Sandbox Simulation. No real personal accounts or credentials exposed.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
